@@ -48,9 +48,13 @@ contenedorPrincipal.append(textoNombre);
 const input = document.createElement("input");
 input.id = "inputNombre";
 input.type = "text";
-input.value = "Ignacio";
+//input.value = "Ignacio";
+input.setAttribute("placeholder", "Nombre");
+input.addEventListener("change", function(){
+    console.log(input.value);
+});
 contenedorPrincipal.append(input);
-const botonEnviar = document.createElement("button");
+let botonEnviar = document.createElement("button");
 botonEnviar.className = "btn btn-primary";
 botonEnviar.append("Enviar nombre");
 contenedorPrincipal.append(botonEnviar);
